@@ -18,10 +18,10 @@ nav.navbar,.navbar-expand-lg,.bg-body-tertiary{
 }
 .navbar-expand-lg{
   display: flex !important;
-  flex-basis: 80%;
-  justify-self: center;
-  align-self: auto;
   justify-content: flex-end;
+}
+.active{
+  color: #fff !important;
 }
 .navbar-expand-lg .navbar-collapse{
   justify-content: flex-end;
@@ -78,6 +78,7 @@ a{
   align-items: center;
   flex-direction: column;
   position: relative;
+  margin-top: 20px;
 }
 .hero > p {
   color: #ffffff82;
@@ -140,7 +141,7 @@ img{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 40px;
-  row-gap: 20vh;
+  row-gap: 7vh;
   align-items: center;
   grid-template-areas:
     "o1 t2"
@@ -184,6 +185,8 @@ h2{
 }
 .category>aside{
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 .a1>.img{
     position: absolute;
@@ -393,21 +396,26 @@ gap: 30px;
 }
 
 @media (width< 770px) {
+  nav.navbar{
+    margin-bottom: auto;
+    padding: 0;
+  }
   .body{
     padding: 5px;
-    align-items: center;
   }
   h1{
     width: 100%;
-    font-size: 1.8em;    
+    font-size: 1.8em; 
+    margin-bottom: 30px;   
   }
   h2{
-    font-size: 1.5em;
-    width: 70%;
+    font-size: larger !important;
+    width: 100%;
     text-align: center;
   }
   .hero>h3{
     margin-top: 40px;
+    width: 80% !important;
     text-align: center;
   }
   h3{
@@ -422,8 +430,11 @@ gap: 30px;
     font-size: small;
     width: 70%;
   }
+  p{
+    font-size: 0.8em;
+  }
   .width{
-    width: 75%;
+    width: 90%;
     text-align: center;
   }
   .founder>img{
@@ -434,16 +445,18 @@ gap: 30px;
     width: fit-content;
     margin-bottom: 10px;
   }
+  .hero .cta{
+    display: none;
+  }
   .gta{
     top: auto;
     right: auto;
     margin-top: 0;
-    margin-bottom: 56px;
   }
   .cta{
     font-size: 1em;
     box-sizing: border-box;
-    padding: 10px 50px;
+    padding: 12px 20px;
   }
   .review{
     display: grid;
@@ -452,7 +465,7 @@ gap: 30px;
     row-gap: 15px;
   }
   .review>div{
-    width: 70%;
+    width: 95%;
   }
   div.grid{
     grid-template-columns: 1fr;
@@ -467,8 +480,14 @@ gap: 30px;
     "g6"
     ;
   }
-  .grid h3{
-font-size: larger;
+  .grid div{
+    width: 100%;
+  }
+  .grid p{
+    width: auto;
+  }
+  .category h3{
+font-size: large;
   }
   .waybill-method {
   grid-template-columns: 1fr;
@@ -480,11 +499,16 @@ font-size: larger;
     "s6"
     "f5";
     width: 100%;
-    margin-bottom: 20vh;
+    margin: 50px 0;
+    row-gap: 30px;
     place-items: center;
 }
 .category{
   grid-template-columns: 1fr;
+  height: 10%;
+}
+.category h2{
+  font-size: large;
 }
 .aside{
   width: 100%;
@@ -493,10 +517,14 @@ font-size: larger;
   margin-bottom: 40px;
 }
 aside>.img{
-  width: 70% !important;
+  width: 90% !important;
 }
 aside>.details{
-  width: 70% !important;
+  width: 90% !important;
+  padding-top: 20px;
+}
+.img>img{
+  width: 30%;
 }
 .details p{
   width: 100%;
@@ -511,12 +539,12 @@ aside>.details{
   height: 400px !important;
 }
 .founder{
-  margin-top: 200px !important;
   width: 100%;
   flex-direction: column;
 }
 .founder-details{
-  width: 100%;
+  width: 95%;
+  margin: auto;
   font-size: medium;
 }
 .delivery{
@@ -531,10 +559,13 @@ aside>.details{
   font-size: 0.8em;
 }
 .delivery>img{
-  width: 70%;
+  width: 95%;
+}
+.review p{
+  font-size: large;
 }
 .waybill-method img{
-  width: 70%;
+  width: 95%;
 }
 .waybill-method>div{
   display: flex;
@@ -543,12 +574,15 @@ aside>.details{
   width: 100%;
 }
 .logos{
-flex-direction: column;
+padding: 10px;
 }
 .link{
   flex-direction: column;
   justify-content: center !important;
   align-items: center;
   gap: 0 !important;
+}
+footer{
+  padding: 0;
 }
 }
